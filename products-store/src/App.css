@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Optional: centers the cards within the container */
+  gap: 20px; /* Optional: adds spacing between the cards */
+}
+
+.productDetailPageImage{
+  height: 200px;
+  width: 200px;
+}
+
+.ProductDetailPageContainer{
+  padding: 100px;
+  
+}
+
+.editDetailsForm{
+  padding: 20px;
+}
+
+.product-detail-container {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 18px;
+}
+.add-product-form-container {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+}
+
+.add-product-form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-product-form-container .ant-form-item-label {
+  text-align: left;
+}
+
+.add-product-form-container .ant-form-item-control-input {
+  width: 100%;
+}
+
+.add-product-form-container .ant-space {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product-form-container .ant-form-item-explain-error {
+  margin-top: 5px;
+}
+
+
+
