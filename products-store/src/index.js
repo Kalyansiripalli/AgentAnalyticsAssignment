@@ -8,7 +8,8 @@ import ProductsPage from "./components/ProductsPage";
 import ProductDetailPage from './components/ProductDetailPage';
 import EditProductDetailPage from './components/EditProductDetailPage';
 import AddNewProductPage from './components/AddNewProductPage';
-import AppContextProvider from './context/AppContextProvider';
+import appStore from './store/appStore';
+import {Provider} from "react-redux"
 
 const router = createBrowserRouter(createRoutesFromChildren(
   <Route path='/' element={<App />}>
@@ -21,9 +22,10 @@ const router = createBrowserRouter(createRoutesFromChildren(
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AppContextProvider>
+  <Provider store={appStore}>
       <RouterProvider router={router} />
-  </AppContextProvider>
+  </Provider>
+  
 );
 
 reportWebVitals();

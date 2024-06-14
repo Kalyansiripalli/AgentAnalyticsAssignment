@@ -1,44 +1,66 @@
-# AgentAnalyticsAssignment
+AgentAnalyticsAssignment
 
-Step-1: clone the repository using, git clone
-
-Step-2 : install all the necessary dependencies of both folders using npm i command
-
-Note: insdie the project you will be having 2 folders react application and mock API server , need to make sure your server is running before you start the react application
-Step-3: open integrated terminal for server-api and do "npm start" , once the server becomes active in your localhost , you are good to go
-
-Step -4: open integrated terminal for products-store and do "npm start", this will take a while and start your react website
+This project is a React.js application that interacts with a mock API server to display, edit, and add products.
 
 
-Endpoints
-The application provides the following endpoints:
+Setup
 
-View All Products
-URL: http://localhost:3000/
-Description: Displays a list of all products. Pagination is implemented to show only 4 cards per page.
+1) Clone the repository: https://github.com/your-repo/AgentAnalyticsAssignment.git
 
-Product Detail Page
-URL: http://localhost:3000/Productdetailpage/:id
-Description: Shows detailed information about a specific product.
+2) Install dependencies for the React application: npm install
+
+3) Install dependencies for the mock API server:  npm install
 
 
-Edit Product Details
-URL: http://localhost:3000/editproductdetails/:id
-Description: Allows you to edit the details of an existing product. Changes are updated in real-time on the mock server through a PUT request. The form uses Ant Design (antd) UI library for validation and improved user experience.
+Running the Application
+
+1) Start the mock API server: npm start
+    The server will run on http://localhost:3006.
+
+2) Start the React application: npm start
+    The application will run on http://localhost:3001.
+    Note: Make sure the mock API server is running before starting the React application.
 
 
-Add New Product
-URL: http://localhost:3000/addnewproduct
-Description: Allows you to add a new product to the mock API. Changes are immediately visible on the screen.
+Features
+    1) View All Products
+            URL: http://localhost:3001/
 
+            Description: Displays a list of all products. Pagination is implemented to show 4 cards per page.
+
+    2)Product Detail Page
+            URL: http://localhost:3001/Productdetailpage/:id
+
+            Description: Shows detailed information about a specific product.
+
+    3) Edit Product Details
+            URL: http://localhost:3001/editproductdetails/:id
+
+            Description: Allows you to edit the details of an existing product. Changes are updated in real-time on the mock server through a PUT request. The form uses the Ant Design (antd) UI library for validation and an improved user experience.
+
+    4) Add New Product
+
+            URL: http://localhost:3001/addnewproduct
+
+            Description: Allows you to add a new product to the mock API. Changes are immediately visible on the screen.
+
+Technologies Used
+
+React.js
+React Router
+Redux Toolkit (for state management)
+Ant Design (UI library)
 
 Additional Notes
-Ensure the mock API server is running before starting the React application to avoid any connectivity issues.
-For form validations and improved user experience, Ant Design (antd) UI library has been used.
-With these steps, you should be able to set up and run the project successfully. Enjoy working
 
-statemanagement : contextAPI
-routing : React-router-Dom
+1) Ensure the mock API server is running before starting the React application to avoid connectivity issues.
+
+2) To experience loading states and shimmer effects, follow these steps:
+        Right-click inside the browser
+        Select "Inspect"
+        Go to the "Network" section
+        Select "Slow 3G" or "Fast 3G" from the throttling dropdown
 
 
 
+Enjoy working with the project!

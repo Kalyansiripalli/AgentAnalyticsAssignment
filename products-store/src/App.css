@@ -16,9 +16,10 @@ h1 {
 }
 
 .productDetailPageImage{
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
 }
+
 
 .ProductDetailPageContainer{
   padding: 100px;

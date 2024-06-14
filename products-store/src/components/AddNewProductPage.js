@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button, Form, Input, Space, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import api from "../api/allProducts";
-import AppContext from "../context/AppContext"; // Correct import path
+import { useDispatch, useSelector } from "react-redux";
+import { createNewProduct } from "../store/productSlice";
 
 const SubmitButton = ({ form, children }) => {
   const [submittable, setSubmittable] = React.useState(false);
 
-  // Watch all values
   const values = Form.useWatch([], form);
   React.useEffect(() => {
     form
@@ -26,9 +26,10 @@ const SubmitButton = ({ form, children }) => {
 };
 
 const AddNewProductPage = () => {
-  const { itemsArray, setItemsArray } = useContext(AppContext);
   const navigate = useNavigate();
   const [form] = Form.useForm();
+  const itemsArray = useSelector((store) => store.product.items);
+  const dispatch = useDispatch();
 
   const onFinish = async (values) => {
     console.log(values);
@@ -45,8 +46,7 @@ const AddNewProductPage = () => {
     try {
       const response = await api.post("/productsData", newProduct);
       if (response.status === 201) {
-        // Update the context state
-        setItemsArray([...itemsArray, newProduct]);
+        dispatch(createNewProduct(newProduct));
         message.success("Product added successfully!");
         navigate("/"); // Navigate to home or another route
       } else {

@@ -1,8 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, Space, message } from "antd";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../api/allProducts";
-import AppContext from "../context/AppContext";
+import { useDispatch, useSelector } from "react-redux";
+import { editProductSlice } from "../store/productSlice";
 
 const SubmitButton = ({ form, children }) => {
   const [submittable, setSubmittable] = React.useState(false);
@@ -27,23 +28,20 @@ const SubmitButton = ({ form, children }) => {
 const EditProductDetailPage = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
-  const { itemsArray, setItemsArray } = useContext(AppContext);
-  const [productInfo] = useState(itemsArray[productId-1]);
-
+  const itemsArray = useSelector((store) => store.product.items);
+  const [productInfo] = useState(itemsArray[productId - 1]);
   const [form] = Form.useForm();
+  const dispatch = useDispatch();
 
   const onFinish = async (values) => {
     // Update the product in the data array
     const updatedData = { id: parseInt(productId), ...values };
     const response = await api.put(`/productsData/${productId}`, updatedData);
-    console.log(response.data);
 
-    // Update the context state
-    const updatedItemsArray = itemsArray.map(item => 
+    const updatedItemsArray = itemsArray.map((item) =>
       item.id === parseInt(productId) ? updatedData : item
     );
-    setItemsArray(updatedItemsArray);
-
+    dispatch(editProductSlice(updatedItemsArray));
     // Optionally navigate back or show a success message
     message.success("Product updated successfully!");
     navigate("/"); // Navigate to home or another route
@@ -99,7 +97,9 @@ const EditProductDetailPage = () => {
         <Form.Item>
           <Space>
             <SubmitButton form={form}>Submit</SubmitButton>
-            <Button htmlType="reset" onClick={() => form.resetFields()}>Reset</Button>
+            <Button htmlType="reset" onClick={() => form.resetFields()}>
+              Reset
+            </Button>
           </Space>
         </Form.Item>
       </Form>

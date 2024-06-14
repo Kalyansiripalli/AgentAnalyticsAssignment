@@ -2,8 +2,9 @@
   "productsData": [
     {
       "id": "1",
-      "title": "kalyan",
+      "title": "kalyan siripalli's bag",
       "price": 109.95,
+      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       "rating": {
@@ -240,24 +241,30 @@
       }
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "lays",
-      "price": "5",
-      "description": "lays is unhealth",
-      "category": "junk food",
-      "image": "https://sp.yimg.com/ib/th?&id=ODL.1a2420718b79b4a3fd6473b126b80867&w=148&h=148&c=4&dpr=2&rs=1",
+      "price": "50",
+      "image": "https://sp.yimg.com/ib/th?&id=ODL.1a2420718b79b4a3fd6473b126b80867&w=148&h=148&c=4&dpr=2&rs=1"
+    },
+    {
+      "id": "22",
+      "title": "kurkure",
+      "price": "10",
+      "description": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "category": "junk",
+      "image": "https://up.yimg.com/ib/th?id=OIP.tEt_MArmo4syRybXqtKclwHaFL&pid=Api&rs=1&c=1&qlt=95&w=157&h=109",
       "rating": {
         "rate": 0,
         "count": 0
       }
     },
     {
-      "id": 22,
-      "title": "kurkure",
-      "price": "10",
-      "description": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "id": "23",
+      "title": "dark fantasy",
+      "price": "45",
+      "description": "biscuits",
       "category": "junk",
-      "image": "https://up.yimg.com/ib/th?id=OIP.tEt_MArmo4syRybXqtKclwHaFL&pid=Api&rs=1&c=1&qlt=95&w=157&h=109",
+      "image": "https://up.yimg.com/ib/th?id=OIP.JltHDF0oVvXqoXG6HC6xRwHaHa&pid=Api&rs=1&c=1&qlt=95&w=109&h=109",
       "rating": {
         "rate": 0,
         "count": 0

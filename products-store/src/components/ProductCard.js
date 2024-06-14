@@ -6,6 +6,7 @@ const { Meta } = Card;
 const ProductCard = ({ item }) => {
   return (
     <Card
+      hoverable
       style={{
         width: 300,
       }}
@@ -13,14 +14,19 @@ const ProductCard = ({ item }) => {
         <img
           alt="productImage"
           src={item.image}
-          style={{ width: "70%", height: "200px", margin: "auto",padding:"10px" }}
+          style={{
+            width: "70%",
+            height: "200px",
+            margin: "auto",
+            padding: "10px",
+          }}
         />
       }
       actions={[
         <Link to={`/editproductdetails/${item.id}`}>
           <EditOutlined key="edit" />
         </Link>,
-        
+
         <Link to={`/Productdetailpage/${item.id}`}>
           <EyeOutlined key="eye" />
         </Link>,
